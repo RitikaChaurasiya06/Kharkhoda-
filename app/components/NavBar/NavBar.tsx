@@ -9,7 +9,7 @@ export default function NavBar() {
       <div className={styles.topBar}>
         <div className={styles.contact}>
           <span>📞:</span>
-          <a href="tel:+919211494111">+91-9211494111</a>
+          <a href="tel:+917820092959">+91-7820092959</a>
         </div>
 
         <div className={styles.email}>

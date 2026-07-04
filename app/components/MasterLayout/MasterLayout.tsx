@@ -5,7 +5,7 @@ import styles from "./MasterLayout.module.css";
 
 export default function MasterLayout() {
   const handleDownload = () => {
-    window.open("/docs/site-plan.pdf", "_blank");
+    window.open("/siteplan/siteplan.pdf", "_blank");
   };
 
   // image_8f1eab.png के अनुसार एमेनिटीज का व्यवस्थित डेटा ऑब्जेक्ट
