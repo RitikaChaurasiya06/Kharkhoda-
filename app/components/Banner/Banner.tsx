@@ -65,7 +65,7 @@ export default function Banner() {
                   {/* Registration Status Alert */}
                   <div className={styles.statusAlert}>
                     <span className={styles.squareDot}>■</span>
-                    REGISTRATION STATUS: <span className={styles.closedText}>CLOSED</span>
+                    REGISTRATION STATUS: <span className={styles.closedText}>OPEN</span>
                   </div>
 
                   {/* Bottom Footer Text within banner */}
@@ -87,7 +87,7 @@ export default function Banner() {
     {/* Card 1 */}
     <div className={styles.featureCard}>
       <h3>Registration Last Date - 15 July 2026</h3>
-      <p className={styles.dangerText}>Registration Closed!</p>
+      <p className={styles.dangerText}>Registration Open</p>
       <p className={styles.subText}>Limited plots available. Book yours now!</p>
     </div>
 

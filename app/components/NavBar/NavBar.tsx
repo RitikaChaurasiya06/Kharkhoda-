@@ -47,7 +47,7 @@ export default function NavBar() {
         <button className={styles.registerBtn}>
           REGISTRATION
           <br />
-          CLOSED
+          OPEN
         </button>
 
       </div>
@@ -60,7 +60,7 @@ export default function NavBar() {
 
         <div className={styles.marquee}>
           <div className={styles.track}>
-            ATTENTION: REGISTRATIONS CLOSED !!!! We are no longer accepting new applications or registration amounts. *** Active applications are under review by the allotment committee. *** REGISTRATION LAST DATE:
+            ATTENTION: REGISTRATIONS OPEN !!!! We are accepting new applications or registration amounts. *** Active applications are under review by the allotment committee. *** REGISTRATION LAST DATE:
           </div>
         </div>
 
