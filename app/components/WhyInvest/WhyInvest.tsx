@@ -75,7 +75,7 @@ export default function WhyInvest() {
               <div className={styles.pricingDivider}></div>
               <div className={styles.priceRow}>
                 <span className={styles.priceLabel}>INVESTMENT STARTS FROM</span>
-                <span className={styles.priceValue}>₹53 Lakh*</span>
+                <span className={styles.priceValue}>₹65 Lakh*</span>
               </div>
               
               <div className={styles.pricingDivider}></div>

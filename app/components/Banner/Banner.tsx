@@ -57,7 +57,7 @@ export default function Banner() {
 
                   {/* Feature Tags Row */}
                   <div className={styles.tagsContainer}>
-                    <div className={styles.priceTag}>₹53 LAKH*</div>
+                    <div className={styles.priceTag}>₹65 Lakh*</div>
                     <div className={styles.featureTag}>STILT + 4 FLOORS</div>
                     <div className={styles.featureTag}>HRERA APPROVED</div>
                   </div>

@@ -26,7 +26,7 @@ export default function FooterSection() {
     },
     {
       q: "4. What is the starting investment amount?",
-      a: "The premium residential plots investment in this sector starts from ₹53 Lakh* onwards."
+      a: "The premium residential plots investment in this sector starts from ₹65 Lakh* onwards."
     },
     {
       q: "5. What is the registration amount?",
