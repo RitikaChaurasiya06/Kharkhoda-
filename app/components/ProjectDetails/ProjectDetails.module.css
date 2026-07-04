@@ -1,0 +1,239 @@
+/* ==========================================================
+   1. PRICE LIST SECTION STYLES (image_8fad0f.png)
+   ========================================================== */
+.priceListSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.priceListHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.regionHeading {
+  font-family: serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.reraSubHeading {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.tableResponsiveWrapper {
+  max-width: 1240px;
+  width: 100%;
+  overflow-x: auto; /* छोटे स्क्रीन्स पर स्क्रॉल बार इनेबल करने के लिए */
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+}
+
+.priceGridTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 1000px; /* यह सुनिश्चित करता है कि टेबल का डेटा सिकुड़े नहीं */
+}
+
+.mainTableTitleRow {
+  background-color: #00a651; /* ब्राइट ग्रीन टॉप टाइटल बार */
+}
+
+.tableBannerTitle {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  letter-spacing: 1px;
+}
+
+.columnHeaderRow {
+  background-color: #0c4a34; /* डार्क फॉरेस्ट ग्रीन हेडर रो */
+}
+
+.columnHeaderRow th {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 14px 8px;
+  border: 1px solid #1e293b;
+  line-height: 1.4;
+}
+
+.tableBodyRow {
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.tableBodyRow:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.tableBodyRow:hover {
+  background-color: #f3f4f6;
+}
+
+.tableBodyRow td {
+  font-family: sans-serif;
+  font-size: 11.5px;
+  color: #374151;
+  padding: 12px 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.boldCell {
+  font-weight: 700;
+  color: #0c4a34 !important;
+}
+
+.disclaimerLinkBox {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+}
+
+.disclaimerLink {
+  font-family: sans-serif;
+  font-size: 11px;
+  color: #00a651;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   2. LOCATION ADVANTAGES STYLES (image_8fad30.jpg)
+   ========================================================== */
+.locationSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 24px 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid #f3f4f6;
+}
+
+.locationHeader {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.locationMainTitle {
+  font-family: 'Georgia', serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.locationFlexGrid {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.advantagesLeftStack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advantageRowItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.advantageTextNode {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantageTextNode h4 {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px 0;
+  letter-spacing: 0.3px;
+}
+
+.advantageTextNode p {
+  font-family: sans-serif;
+  font-size: 11px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Right Map Block */
+.mapRightBlock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mapGraphicCard {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.blueprintMapImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .locationFlexGrid {
+    grid-template-columns: 1fr; 
+    gap: 50px;
+  }
+  
+  .mapRightBlock {
+    order: 2;   
+  }
+}
+
+@media (max-width: 640px) {
+  .regionHeading {
+    font-size: 26px;
+  }
+  .locationMainTitle {
+    font-size: 22px;
+  }
+}

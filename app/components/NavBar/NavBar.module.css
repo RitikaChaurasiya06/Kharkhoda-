@@ -1,0 +1,181 @@
+.topBar {
+    background: #1e6144;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 24px;
+    font-family: serif;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+.emailLabel{
+   color: #fb923c;
+}
+.contact,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topBar a {
+    color: white;
+    text-decoration: none;
+}
+
+.topBar a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 4px solid #fb923c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 26px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.logo img {
+    height: 46px;
+}
+
+.centerHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: serif;
+  margin: 0 20px;
+  line-height: 0.9;
+}
+
+.govText {
+  font-size: 10px;
+  font-weight: bold;
+  color: #1e614499; 
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+}
+
+.centerHeading h1 {
+  font-size: 14px; 
+  font-weight: 700;
+  color: #005743; 
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+  white-space: pre-line; 
+}
+
+.locationText {
+  font-size: 10px;
+  font-weight: bold;
+  color: #1e6144b3; 
+  margin: 0;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #005743; 
+    font-size: 13px;
+    font-family: serif;
+    font-weight: bold;
+    align-items: center;
+}
+
+.menu li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.menu li::before {
+    content: "✓";
+    color: #d97706;
+    margin-right: 6px;
+    font-weight: 900;
+}
+
+.registerBtn {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-family: serif;
+  padding: 8px 40px; 
+  font-weight: 900; 
+  font-size: 12px; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em; 
+  border: 2px solid #1e6144;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.registerBtn:hover {
+  background-color: #dc2626;
+}
+
+
+/* ==========================
+STATUS BAR
+========================== */
+
+.statusBar {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background: #0f5d3f;
+  font-family: serif;
+
+    overflow: hidden;
+      border-bottom: 4px solid #fb923c;
+}
+
+.closed {
+    background: #d50000;
+    color: white;
+    padding: 15px 30px;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* ==========================
+MARQUEE
+========================== */
+
+.marquee {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.track {
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 100%;
+    animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

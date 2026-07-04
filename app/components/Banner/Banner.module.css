@@ -1,0 +1,257 @@
+.bannerContainer {
+  width: 100%;
+  height: 85vh; /* एडजस्ट करें जितनी हाइट आपको रखनी हो */
+  position: relative;
+  overflow: hidden;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slideBackground {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #0f5d3f 1%, rgba(89, 89, 89, 0.4) 20%, rgba(112, 112, 112, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.contentWrapper {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Badge Style */
+.badge {
+  background-color: #22c55e; /* Bright Green */
+    font-family: serif;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 14px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+}
+
+/* Headings matching typography of image_81743f.jpg */
+.mainHeading {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: bold;
+    font-family: serif;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subHeading {
+    font-family: serif;
+    color: #22c55e; /* Light green tone matching the image */
+  font-size: 42px;
+  margin-top: 5px;
+}
+
+/* Location Selector Line & Text */
+.locationTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  width: 35px;
+  height: 3px;
+  background-color: #22c55e;
+}
+
+.locationText {
+    font-family: serif;
+    color: #ffffff;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Tags Layout */
+.tagsContainer {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.priceTag {
+  background-color: #22c55e;
+    font-family: serif;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+
+.featureTag {
+  background: rgba(255, 255, 255, 0.15);
+    font-family: serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+/* Status Alert Bar */
+.statusAlert {
+  background: rgba(176, 43, 43, 0.6);
+  border-left: 4px solid #ef4444; /* Dark Red border accent */
+    font-family: serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.squareDot {
+    font-family: serif;
+    color: #ef4444;
+  font-size: 12px;
+}
+
+.closedText {
+    font-family: serif;
+    color: #ef4444;
+  font-weight: 900;
+}
+
+/* Footer Info Line */
+.bannerFooter {
+    font-family: serif;
+    color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
+
+/* Customizing Swiper Pagination Bullets to match theme */
+:global(.swiper-pagination-bullet) {
+  background: #ffffff !important;
+  opacity: 0.5;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #22c55e !important;
+  opacity: 1 !important;
+  width: 20px !important;
+  border-radius: 4px !important;
+}
+
+/* ==========================
+FEATURES GRID SECTION (image_82e74b.png)
+========================== */
+
+.featuresContainer {
+  width: 100%;
+  background-color: #f0f7f4; /* Light greenish-white background tint */
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.featuresGrid {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columns layout */
+  gap: 20px;
+}
+
+.featureCard {
+  background: #ffffff;
+  border: 3px solid #10b981; /* Precise green border matching the image */
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  font-family: 'Georgia', 'Times New Roman', serif; /* Serif typography matching the text */
+}
+
+/* Main bold heading inside cards */
+.featureCard h3 {
+  font-size: 15px;
+  color: #111827; /* Dark black/grey */
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+/* Secondary headings inside cards 2, 3, 4 */
+.mutedHeading {
+  font-size: 16px;
+  color: #4b5563; /* Subtle muted gray */
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+/* Red closed text inside card 1 */
+.dangerText {
+  font-size: 10px;
+  color: #e11d48; /* Red color */
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Small bottom descriptive text */
+.subText {
+  font-size: 12px;
+  color: #6b7280;
+  margin: auto 0 0 0; /* Pushes text to the absolute bottom of card */
+  line-height: 1.4;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .featuresGrid {
+    grid-template-columns: 1fr; /* Stacked layout on small mobiles */
+  }
+}

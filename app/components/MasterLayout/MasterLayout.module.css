@@ -1,0 +1,806 @@
+/* ==========================================
+   MAIN SECTION WRAPPER & CONTAINER
+   ========================================== */
+.masterLayoutSection {
+  width: 100%;
+  background-color: #fafdfb; /* Extremely light layout layout tint background */
+  padding: 50px 35px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionContainer {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; /* Balanced Content & Blueprint Viewer ratio */
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   LEFT SIDE CONTENT INTERFACES
+   ========================================== */
+.leftContentBlock {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #c2d6ce;
+  background-color: transparent;
+  padding: 5px 12px;
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+
+.badgeIcon {
+  font-size: 12px;
+  color: #0b5743;
+}
+
+.badgeText {
+  font-size: 11px;
+  font-weight: bold;
+  color: #0b5743;
+  letter-spacing: 1px;
+}
+
+.mainHeading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.headingHighlight {
+  color: #0b5743; /* Custom brand identity deep green accent */
+}
+
+.descriptionText {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 30px 0;
+}
+
+/* Feature Stack Cards Layout */
+.featureCardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.iconContainer {
+  color: #10b981; /* Highlighting green vector elements */
+  background-color: #f0fdf4;
+  padding: 10px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTextContent h3 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.cardTextContent p {
+  font-size: 11px;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Call To Action Buttons */
+.downloadCtaBtn {
+  background-color: #0b5743;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  padding: 15px 30px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(11, 87, 67, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.downloadCtaBtn:hover {
+  background-color: #084233;
+  transform: translateY(-2px);
+}
+
+.btnIcon {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* ==========================================
+   RIGHT SIDE BLUEPRINT DOCUMENT INTERFACE
+   ========================================== */
+.rightViewerBlock {
+  position: relative;
+  width: 100%;
+}
+
+.interactiveFloatingLabel {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  background-color: #0b5743;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  letter-spacing: 0.8px;
+  z-index: 10;
+}
+
+/* Main Mock Frame Panel Dashboard Layout */
+.viewerDashboard {
+  width: 100%;
+  background-color: #2a2a2a; /* Custom dark layout tone mirroring professional document canvas */
+  border: 8px solid #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Header Function Toolbar Styling */
+.toolbarHeader {
+  background-color: #323639;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222527;
+  color: #f1f3f4;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.leftTools, .rightTools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolIconBtn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 4px 6px;
+  transition: opacity 0.1s;
+}
+
+.toolIconBtn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.divider {
+  color: #5f6368;
+}
+
+.pageCounter, .zoomPercentage {
+  font-size: 12px;
+}
+
+/* Main Display Internal Workings Panel Body */
+.viewerCanvasBody {
+  display: grid;
+  grid-template-columns: 140px 1fr; /* Thumbnail Panel list layout vs Main Screen preview */
+  height: 480px;
+}
+
+/* Sidebar Previews List styling inside frame dashboard */
+.thumbnailSidebar {
+  background-color: #323639;
+  border-right: 1px solid #222527;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.activeThumbnailFrame {
+  width: 95px;
+  border: 3px solid #4d8df1; /* Blue selected boundary indicator frame lines */
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumbnailIndexNumber {
+  color: #ffffff;
+  font-size: 11px;
+  font-family: sans-serif;
+  margin-top: 6px;
+}
+
+/* Canvas Display main layout view settings */
+.mainCanvasDisplay {
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.mainBlueprintImg {
+  max-width: 90%;
+  max-height: 95%;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* ==========================================
+   MEDIA QUERY ADJUSTMENT PANEL
+   ========================================== */
+@media (max-width: 960px) {
+  .sectionContainer {
+    grid-template-columns: 1fr; /* Stack into single stacked elements block framework */
+    gap: 40px;
+  }
+  .mainHeading {
+    font-size: 34px;
+  }
+  .viewerCanvasBody {
+    grid-template-columns: 1fr; /* Drop secondary listing panel sidebar framework elements */
+    height: 400px;
+  }
+  .thumbnailSidebar {
+    display: none; /* Hide preview box side lists completely on mobile dashboards */
+  }
+}
+/* ==========================================
+   1. COMPLIANCE HERO SECTION (image_85319f.png)
+   ========================================== */
+.complianceSection {
+  width: 100%;
+  background-color: #1a5c41; /* Premium solid deep green background */
+  padding: 50px 24px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.complianceContainer {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.complianceLeft {
+  display: flex;
+  flex-direction: column;
+  font-family:  serif;
+}
+
+.complianceHeading {
+  font-size: 38px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+
+.reraNumberPill {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 12px 16px;
+  border-radius: 2px;
+}
+
+.pillVerticalLine {
+  width: 3px;
+  height: 24px;
+  background-color: #ffffff;
+  margin-right: 12px;
+}
+
+.reraNumberText {
+  color: #ffffff;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Compliance Grid Layout */
+.complianceRightGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.complianceCard {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(5px);
+}
+
+.complianceIcon {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.complianceCardText {
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.complianceCardText h4 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family:  serif;
+  margin: 0;
+  letter-spacing: 0.8px;
+  line-height: 1.3;
+}
+
+.complianceCardText p {
+  font-size: 12px;
+  margin: 2px 0 0 0;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* ==========================================
+   2. MASTER LAYOUT SECTION (image_851e5a.jpg)
+   ========================================== */
+.masterLayoutSection {
+  width: 100%;
+  background-color: #fafdfb;
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionContainer {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.leftContentBlock {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #c2d6ce;
+  padding: 5px 12px;
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+
+.badgeIcon {
+  font-size: 12px;
+  color: #0b5743;
+}
+
+.badgeText {
+  font-size: 11px;
+  font-weight: bold;
+  color: #0b5743;
+  letter-spacing: 1px;
+}
+
+.mainHeading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.headingHighlight {
+  color: #0b5743;
+}
+
+.descriptionText {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 30px 0;
+}
+
+.featureCardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.iconContainer {
+  color: #10b981;
+  background-color: #f0fdf4;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTextContent h3 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.cardTextContent p {
+  font-size: 11px;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 600;
+}
+
+.downloadCtaBtn {
+  background-color: #0b5743;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  padding: 15px 30px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(11, 87, 67, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.downloadCtaBtn:hover {
+  background-color: #084233;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   3. DOCUMENT VIEWER INTERFACE
+   ========================================== */
+.rightViewerBlock {
+  position: relative;
+  width: 100%;
+}
+
+.interactiveFloatingLabel {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  background-color: #0b5743;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  z-index: 10;
+}
+
+.viewerDashboard {
+  width: 100%;
+  background-color: #2a2a2a;
+  border: 8px solid #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.toolbarHeader {
+  background-color: #323639;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222527;
+  color: #f1f3f4;
+  font-size: 13px;
+}
+
+.leftTools, .rightTools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolIconBtn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 4px 6px;
+}
+
+.toolIconBtn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.divider {
+  color: #5f6368;
+}
+
+.viewerCanvasBody {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  height: 480px;
+}
+
+.thumbnailSidebar {
+  background-color: #323639;
+  border-right: 1px solid #222527;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.activeThumbnailFrame {
+  width: 95px;
+  border: 3px solid #4d8df1;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumbnailIndexNumber {
+  color: #ffffff;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.mainCanvasDisplay {
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mainBlueprintImg {
+  max-width: 90%;
+  max-height: 95%;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* ==========================================
+   4. RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 1024px) {
+  .complianceContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .sectionContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complianceHeading {
+    font-size: 30px;
+  }
+  .complianceRightGrid {
+    grid-template-columns: 1fr;
+  }
+  .mainHeading {
+    font-size: 34px;
+  }
+  .viewerCanvasBody {
+    grid-template-columns: 1fr;
+    height: 380px;
+  }
+  .thumbnailSidebar {
+    display: none;
+  }
+}
+/* ==========================================
+   3. PREMIUM AMENITIES & LIFESTYLE (image_8f1eab.png)
+   ========================================== */
+.amenitiesSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.amenitiesHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.amenitiesMainTitle {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0c1e19;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.accentUnderline {
+  width: 50px;
+  height: 4px;
+  background-color: #1a5c41; /* सिग्नेचर थिक डार्क ग्रीन अंडरलाइन बार */
+  margin: 0 auto 16px auto;
+}
+
+.amenitiesSubTitle {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* 3-कॉलम ग्रिड लेआउट */
+.amenitiesColumnsContainer {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.amenityCategoryColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categoryVerticalIndicator {
+  width: 3px;
+  height: 18px;
+  background-color: #1a5c41; /* केटेगरी के आगे की वर्टिकल ग्रीन लाइन */
+}
+
+.categoryHeading {
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a5c41;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.amenityItemsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* इंडिविजुअल एमेनिटी रो कार्ड */
+.amenityRowCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 2px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.amenityRowCard:hover {
+  border-color: #1a5c41;
+  box-shadow: 0 4px 12px rgba(26, 92, 65, 0.05);
+}
+
+.amenityRowIcon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenityRowLabel {
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* रेस्पॉन्सिव मीडिया क्वेरीज */
+@media (max-width: 1024px) {
+  .amenitiesColumnsContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenitiesColumnsContainer {
+    grid-template-columns: 1fr;
+  }
+  .amenitiesMainTitle {
+    font-size: 26px;
+  }
+}
