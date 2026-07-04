@@ -13,8 +13,8 @@ export default function FooterSection() {
 
   const faqData = [
     {
-      q: "1. What are DDJAY Plots in Sector 27  Kharkhoda ?",
-      a: "DDJAY Plots in Sector 27  Kharkhoda  are residential plots developed under the Deen Dayal Jan Awas Yojana (DDJAY), offering planned infrastructure and flexible home construction options."
+      q: "1. What are DDJAY Plots in Sector 6  Kharkhoda ?",
+      a: "DDJAY Plots in Sector 6  Kharkhoda  are residential plots developed under the Deen Dayal Jan Awas Yojana (DDJAY), offering planned infrastructure and flexible home construction options."
     },
     {
       q: "2. Is the project government approved?",
@@ -91,7 +91,7 @@ export default function FooterSection() {
           {/* Disclaimer Text Block */}
           <div className={styles.disclaimerBlock}>
             <p className={styles.disclaimerText}>
-              <strong>OFFICIAL PROJECT DISCLAIMER</strong> This website is an informational platform for residential plotted projects offered under the development in Sector 27,  Kharkhoda . Marketing and customer facilitation services are provided by OM SHIVA REAL ESTATE PRIVATE LIMITED. This is not an official government website.
+              <strong>OFFICIAL PROJECT DISCLAIMER</strong> This website is an informational platform for residential plotted projects offered under the development in Sector 6,  Kharkhoda . Marketing and customer facilitation services are provided by OM SHIVA REAL ESTATE PRIVATE LIMITED. This is not an official government website.
             </p>
           </div>
 

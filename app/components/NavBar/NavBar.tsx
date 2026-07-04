@@ -35,7 +35,7 @@ export default function NavBar() {
         <div className={styles.centerHeading}>
         <p className={styles.govText}>GOVERNMENT OF HARYANA</p>
         <h1>DEEN DAYAL JAN AWAS YOJNA</h1>
-        <p className={styles.locationText}>SECTOR 27,  Kharkhoda </p>
+        <p className={styles.locationText}>Sector 6,  Kharkhoda </p>
       </div>
       <ul className={styles.menu}>
         <li><a href="/brochure/brochure.pdf" target="_blank" rel="noopener noreferrer">BROCHURE</a></li>

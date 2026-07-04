@@ -52,7 +52,7 @@ export default function Banner() {
                   {/* Location Tag */}
                   <div className={styles.locationTag}>
                     <span className={styles.line}></span>
-                    <span className={styles.locationText}>SECTOR 27,  Kharkhoda </span>
+                    <span className={styles.locationText}>Sector 6,  Kharkhoda </span>
                   </div>
 
                   {/* Feature Tags Row */}
@@ -86,7 +86,7 @@ export default function Banner() {
     
     {/* Card 1 */}
     <div className={styles.featureCard}>
-      <h3>Registration Last Date - 15 June 2026</h3>
+      <h3>Registration Last Date - 15 July 2026</h3>
       <p className={styles.dangerText}>Registration Closed!</p>
       <p className={styles.subText}>Limited plots available. Book yours now!</p>
     </div>
@@ -94,7 +94,7 @@ export default function Banner() {
     {/* Card 2 */}
     <div className={styles.featureCard}>
       <h3>Registration Open</h3>
-      <p className={styles.mutedHeading}>Allotment Date 18 June 2026</p>
+      <p className={styles.mutedHeading}>Allotment Date 18 July 2026</p>
       <p className={styles.subText}>Book your premium plot today.</p>
     </div>
 

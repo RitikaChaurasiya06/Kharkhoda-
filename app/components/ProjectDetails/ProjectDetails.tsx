@@ -28,7 +28,7 @@ export default function ProjectDetails() {
     <>
       <section className={styles.priceListSection}>
         <div className={styles.priceListHeader}>
-          <h2 className={styles.regionHeading}>Sector 27,  Kharkhoda </h2>
+          <h2 className={styles.regionHeading}>Sector 6,  Kharkhoda </h2>
           <p className={styles.reraSubHeading}>
             HRERA No.: HRERA-PKL-JJR-845-2026 (Deen Dayal Jan Awas Yojna Plots)
           </p>
@@ -103,7 +103,7 @@ export default function ProjectDetails() {
             <div className={styles.mapGraphicCard}>
               <img 
                 src="/location.webp" 
-                alt="Sector 27  Kharkhoda  Layout Map Route Guide" 
+                alt="Sector 6  Kharkhoda  Layout Map Route Guide" 
                 className={styles.blueprintMapImg} 
               />
             </div>

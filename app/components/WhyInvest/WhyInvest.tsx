@@ -38,11 +38,11 @@ export default function WhyInvest() {
             <h2 className={styles.mainTitle}>
               WHY INVEST IN DDJAY <br />
               PLOTS <br />
-              <span className={styles.greenHighlight}>IN  Kharkhoda  SECTOR 27?</span>
+              <span className={styles.greenHighlight}>IN  Kharkhoda  Sector 6?</span>
             </h2>
             
             <p className={styles.description}>
-               Kharkhoda  Sector 27 is rapidly emerging as a major real estate and industrial hotspot 
+               Kharkhoda  Sector 6 is rapidly emerging as a major real estate and industrial hotspot 
               because of its strategic connectivity and upcoming developments.
             </p>
             
@@ -97,7 +97,7 @@ export default function WhyInvest() {
       <div className={styles.topAlertBar}>
         <div className={styles.alertBarContainer}>
           <div className={styles.alertLeftText}>
-            <strong>Premium DDJAY Plots in Sector 27.</strong> <br />
+            <strong>Premium DDJAY Plots in Sector 6.</strong> <br />
             <span>Registration Amount – ₹29,000/- Only*</span>
             <button className={styles.miniClosedBtn}>REGISTRATION CLOSED</button>
           </div>
@@ -136,7 +136,7 @@ export default function WhyInvest() {
           
           <div className={styles.infoBarItem}>
             <h4>Plots Starting</h4>
-            <p>Price ₹53 Lakh*</p>
+            <p>Price ₹65 Lakh*</p>
           </div>
           
           <span className={styles.barVerticalDivider}></span>

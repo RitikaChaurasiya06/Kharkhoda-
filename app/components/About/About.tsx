@@ -26,11 +26,11 @@ export default function AboutProject() {
           {/* Right Block Descriptions */}
           <div className={styles.textWrapper}>
             <span className={styles.miniTagLine}>THE FUTURE OF PREMIUM LIVING</span>
-            <h2 className={styles.sectionHeading}>Premium DDJAY Plots in Sector 27</h2>
+            <h2 className={styles.sectionHeading}>Premium DDJAY Plots in Sector 6</h2>
             <div className={styles.greenUnderlineShort}></div>
             
             <p className={styles.descriptionText}>
-              Welcome to , a premium gated community offering DDJAY plots in  Kharkhoda  Sector 27 with world-class amenities, modern infrastructure, and excellent future appreciation potential.
+              Welcome to , a premium gated community offering DDJAY plots in  Kharkhoda  Sector 6 with world-class amenities, modern infrastructure, and excellent future appreciation potential.
             </p>
             
             <p className={styles.descriptionText}>
@@ -70,12 +70,12 @@ export default function AboutProject() {
           <span className={styles.projectMiniTag}>ABOUT THE PROJECT</span>
           
           <h2 className={styles.projectMainHeading}>
-            DDJAY Plots in Sector 27  Kharkhoda : <span className={styles.headingHighlight}>A Planned Investment Opportunity</span>
+            DDJAY Plots in Sector 6  Kharkhoda : <span className={styles.headingHighlight}>A Planned Investment Opportunity</span>
           </h2>
           <div className={styles.greenUnderlineLong}></div>
 
           <p className={styles.projectParagraph}>
-            DDJAY Plots in Sector 27 are attracting attention from homebuyers and investors looking for well-planned residential developments in  Kharkhoda . Developed under the Deen Dayal Jan Awas Yojana (DDJAY), these plots offer an opportunity to own land in a growing region of Haryana with improving infrastructure and connectivity.
+            DDJAY Plots in Sector 6 are attracting attention from homebuyers and investors looking for well-planned residential developments in  Kharkhoda . Developed under the Deen Dayal Jan Awas Yojana (DDJAY), these plots offer an opportunity to own land in a growing region of Haryana with improving infrastructure and connectivity.
           </p>
           <p className={styles.projectParagraph}>
             Located in a developing residential corridor, DDJAY Plots  Kharkhoda  provide a suitable option for individuals who want the flexibility of constructing their own home while benefiting from an organized township environment. The project follows government guidelines and offers modern planning, internal roads, green spaces, and essential infrastructure designed to support long-term residential growth.
@@ -90,9 +90,9 @@ export default function AboutProject() {
           The project offers an attractive entry point for property investment, with <span className={styles.highlightText}>investment starting from ₹53 Lakh*</span>. Interested buyers can secure their booking with a registration amount of <span className={styles.highlightText}>₹29,000/-*</span>, making the initial investment relatively accessible compared to many urban residential markets.
         </p>
         <p className={styles.projectParagraph}>
-          Sector 27 enjoys connectivity to key areas of  Kharkhoda  and benefits from the region's ongoing development. The area's proximity to educational institutions, healthcare facilities, commercial zones, and major road networks contributes to its growing appeal. As  Kharkhoda  continues to evolve as an emerging residential destination, plotted developments in strategic sectors are expected to remain in demand.
+          Sector 6 enjoys connectivity to key areas of  Kharkhoda  and benefits from the region's ongoing development. The area's proximity to educational institutions, healthcare facilities, commercial zones, and major road networks contributes to its growing appeal. As  Kharkhoda  continues to evolve as an emerging residential destination, plotted developments in strategic sectors are expected to remain in demand.
         </p> 
-        <p className={styles.projectParagraph}>For those looking to build a customized home or diversify their real estate portfolio, DDJAY Plots in Sector 27 present a balanced combination of regulatory compliance, development potential, and future growth prospects. With DTCP approval, RERA registration, and Stilt + 4 Floors construction permission, the project offers a structured residential investment opportunity in the expanding  Kharkhoda  market.</p>
+        <p className={styles.projectParagraph}>For those looking to build a customized home or diversify their real estate portfolio, DDJAY Plots in Sector 6 present a balanced combination of regulatory compliance, development potential, and future growth prospects. With DTCP approval, RERA registration, and Stilt + 4 Floors construction permission, the project offers a structured residential investment opportunity in the expanding  Kharkhoda  market.</p>
 
         </div>
       </div>
