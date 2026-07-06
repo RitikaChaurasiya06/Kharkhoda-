@@ -205,13 +205,13 @@ export default function RegistrationForm() {
               </div>
             </div>
 
-            {/* Payment Section (Exclusively UPI/QR) */}
             <div className={styles.paymentSelectionBox}>
               <label className={styles.sectionLabel}>Payment Method</label>
               <div className={styles.paymentDetailsBox}>
                 <div className={styles.qrPlaceholderBox}>
                   <div className={styles.dummyQrCode}>
-                    <span>QR CODE PLACEHOLDER</span>
+                    {/* <span>QR CODE PLACEHOLDER</span> */}
+                    <img src="/Qr.jpeg" alt="Dynamic QR Code" className={styles.qrImage} />
                   </div>
                   <p className={styles.qrInstructions}>
                     Scan this dynamic QR code using any UPI App (GPay, PhonePe, Paytm) to pay <strong>₹31,000/-</strong> securely.
