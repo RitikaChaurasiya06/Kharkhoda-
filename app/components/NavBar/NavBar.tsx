@@ -44,7 +44,7 @@ export default function NavBar() {
         <li><a href="/pricelist/pricelist.pdf" target="_blank" rel="noopener noreferrer">PRICE LIST</a></li>
       </ul>
 
-        <button className={styles.registerBtn}>
+        <button className={styles.registerBtn} onClick={() => window.open("/registration-form", "_blank")}>
           REGISTRATION
           <br />
           OPEN

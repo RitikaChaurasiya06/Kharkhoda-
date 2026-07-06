@@ -1,0 +1,377 @@
+.formSection {
+  width: 100%;
+  background-color: #f4f7f5; /* प्रीमियम लाइट म्यूटेड ग्रीन बैकग्राउंड */
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.formContainer {
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left Column Styling */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  background-color: #1a5c41;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  align-self: flex-start;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.mainTitle {
+  font-family: 'Georgia', serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #0c1e19;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.greenText {
+  color: #1a5c41;
+}
+
+.subtitle {
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 35px 0;
+}
+
+.summaryCard {
+  background-color: #ffffff;
+  border-left: 4px solid #1a5c41;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  margin-bottom: 25px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.summaryRow strong {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  color: #1a5c41;
+}
+
+.approvedText {
+  color: #00a651;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #f3f4f6;
+  margin: 14px 0;
+}
+
+.secureNotice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #1a5c41;
+  font-weight: 600;
+}
+
+.formColumn {
+  width: 100%;
+}
+
+.registrationForm {
+  background-color: #ffffff;
+  padding: 40px;
+  color: #1f2937;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(12, 30, 25, 0.06);
+  box-sizing: border-box;
+}
+
+.formHeaderTitle {
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  color: #0c1e19;
+  margin: 0 0 25px 0;
+  border-bottom: 2px solid #e6eee9;
+  padding-bottom: 12px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="email"],
+.inputGroup input[type="tel"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13.5px;
+  font-family: sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #1a5c41;
+}
+
+/* Document Row Grid */
+.documentRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fileUploadWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.fileUploadWrapper input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileLabel {
+  display: block;
+  padding: 12px;
+  background-color: #f9fafb;
+  border: 1px dashed #ced4da;
+  border-radius: 4px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s;
+}
+
+.fileUploadWrapper:hover .fileLabel {
+  background-color: #e6eee9;
+  border-color: #1a5c41;
+}
+
+/* Payment Section Styling */
+.paymentSelectionBox {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.sectionLabel {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.paymentTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paymentTab {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paymentTab input[type="radio"] {
+  margin-top: 3px;
+  accent-color: #1a5c41;
+}
+
+.activeTab {
+  border-color: #1a5c41;
+  background-color: #f0f7f4;
+}
+
+.tabText {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabText strong {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #111827;
+}
+
+.tabText span {
+  font-family: sans-serif;
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Dynamic Panel Container */
+.paymentDetailsBox {
+  background-color: #f9fafb;
+  border: 1px dashed #e5e7eb;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.qrPlaceholderBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dummyQrCode {
+  width: 140px;
+  height: 140px;
+  background-color: #e2e8f0;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 9px;
+  color: #64748b;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.qrInstructions {
+  font-family: sans-serif;
+  font-size: 11.5px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Card Inputs Layout */
+.cardInputRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fullWidthInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cardMetaRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cardMetaRow input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Action Trigger Button */
+.submitBtn {
+  width: 100%;
+  background-color: #00a651; /* ब्राइट कनवर्टिंग ग्रीन ऐक्शन बटन */
+  color: #ffffff;
+  border: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.2);
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #0c8243;
+}
+
+/* Responsive UI Adaptability */
+@media (max-width: 1024px) {
+  .formContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .registrationForm {
+    padding: 24px;
+  }
+  .documentRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .mainTitle {
+    font-size: 32px;
+  }
+}
