@@ -12,6 +12,10 @@ export default function RegistrationForm() {
     panFile: null as File | null,
   });
 
+  // State to manage Thank You screen visibility
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -32,27 +36,24 @@ export default function RegistrationForm() {
     }
 
     try {
+      setIsSubmitting(true);
       const data = new FormData();
 
-      // Text fields append karein
       data.append("name", formData.name);
       data.append("email", formData.email);
       data.append("phone", formData.phone);
-      data.append("paymentMethod", "qr"); // Schema ke hisab se 'qr' fixed bhej rahe hain
+      data.append("paymentMethod", "qr"); 
 
-      // File fields ko Schema keys ke mutabik bhej rahe hain (aadhaarUrl aur panUrl)
       data.append("aadhaarUrl", formData.aadhaarFile);
       data.append("panUrl", formData.panFile);
 
       const response = await fetch("http://localhost:5000/api/v1/register", {
         method: "POST",
-        body: data, // Browser iska header boundary khud handle karega
+        body: data, 
       });
 
       const text = await response.text();
-
-      console.log("Status:", response.status);
-      console.log("Response:", text);
+      setIsSubmitting(false);
 
       if (!response.ok) {
         let serverErrorMsg = "Server Error";
@@ -60,16 +61,31 @@ export default function RegistrationForm() {
           const parsedErr = JSON.parse(text);
           if (parsedErr.message) serverErrorMsg = parsedErr.message;
         } catch {
-          // JSON string nahi hai response
+          // Fallback static error
         }
         alert(serverErrorMsg);
         return;
       }
 
-      const result = JSON.parse(text);
-      alert(result.message || "Registration completed successfully!");
+      // Clear the form fields smoothly
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        aadhaarFile: null,
+        panFile: null,
+      });
+
+      // Show Thank You Screen Overlay
+      setShowThankYou(true);
+
+      // Automatically hide the Thank You screen after 5 seconds (5000 milliseconds)
+      setTimeout(() => {
+        setShowThankYou(false);
+      }, 5000);
       
     } catch (error) {
+      setIsSubmitting(false);
       console.error("Network Error:", error);
       alert("Network Error: Could not connect to the registration server.");
     }
@@ -77,9 +93,30 @@ export default function RegistrationForm() {
 
   return (
     <section className={styles.formSection}>
+      {/* Dynamic Thank You Screen Overlay */}
+      {showThankYou && (
+        <div className={styles.thankYouOverlay}>
+          <div className={styles.thankYouCard}>
+            <div className={styles.successCheckIcon}>
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1a5c41" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className={styles.thankYouTitle}>Thank You!</h2>
+            <p className={styles.thankYouMessage}>
+              Your registration and documents have been received successfully. 
+              A confirmation email has been sent to your registered address.
+            </p>
+            <div className={styles.timerProgressBox}>
+              <div className={styles.progressBar}></div>
+              <p className={styles.timerNotice}>Closing automatically in 5 seconds...</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className={styles.formContainer}>
         
-        {/* Left Informational Column */}
         <div className={styles.infoColumn}>
           <div className={styles.badge}>SECURE BOOKING PORTAL</div>
           <h2 className={styles.mainTitle}>
@@ -134,6 +171,7 @@ export default function RegistrationForm() {
                 required 
                 value={formData.name}
                 onChange={handleInputChange}
+                disabled={isSubmitting}
               />
             </div>
 
@@ -148,6 +186,7 @@ export default function RegistrationForm() {
                 required 
                 value={formData.email}
                 onChange={handleInputChange}
+                disabled={isSubmitting}
               />
             </div>
 
@@ -163,6 +202,7 @@ export default function RegistrationForm() {
                 pattern="[0-9]{10}"
                 value={formData.phone}
                 onChange={handleInputChange}
+                disabled={isSubmitting}
               />
             </div>
 
@@ -176,9 +216,9 @@ export default function RegistrationForm() {
                     type="file" 
                     id="aadhaarFile" 
                     accept="image/*,.pdf" 
-                    required
                     onChange={(e) => handleFileChange(e, "aadhaarFile")}
                     style={{ display: "none" }}
+                    disabled={isSubmitting}
                   />
                   <label htmlFor="aadhaarFile" className={styles.fileLabel}>
                     {formData.aadhaarFile ? formData.aadhaarFile.name : "Choose File (PDF/JPG)"}
@@ -194,9 +234,9 @@ export default function RegistrationForm() {
                     type="file" 
                     id="panFile" 
                     accept="image/*,.pdf" 
-                    required
                     onChange={(e) => handleFileChange(e, "panFile")}
                     style={{ display: "none" }}
+                    disabled={isSubmitting}
                   />
                   <label htmlFor="panFile" className={styles.fileLabel}>
                     {formData.panFile ? formData.panFile.name : "Choose File (PDF/JPG)"}
@@ -210,7 +250,6 @@ export default function RegistrationForm() {
               <div className={styles.paymentDetailsBox}>
                 <div className={styles.qrPlaceholderBox}>
                   <div className={styles.dummyQrCode}>
-                    {/* <span>QR CODE PLACEHOLDER</span> */}
                     <img src="/Qr.jpeg" alt="Dynamic QR Code" className={styles.qrImage} />
                   </div>
                   <p className={styles.qrInstructions}>
@@ -221,8 +260,8 @@ export default function RegistrationForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className={styles.submitBtn}>
-              Process Payment (₹31,000)
+            <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+              {isSubmitting ? "Processing..." : "Process Payment (₹31,000)"}
             </button>
 
           </form>
