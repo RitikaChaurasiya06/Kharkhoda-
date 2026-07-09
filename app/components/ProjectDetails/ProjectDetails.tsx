@@ -30,7 +30,7 @@ export default function ProjectDetails() {
         <div className={styles.priceListHeader}>
           <h2 className={styles.regionHeading}>Sector 6,  Kharkhoda </h2>
           <p className={styles.reraSubHeading}>
-            HRERA No.: HRERA-PKL-JJR-845-2026 (Deen Dayal Jan Awas Yojna Plots)
+            HRERA No.: HRERA-PKL-SNP-797-2025 (Deen Dayal Jan Awas Yojna Plots)
           </p>
         </div>
 

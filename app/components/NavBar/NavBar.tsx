@@ -39,7 +39,7 @@ export default function NavBar() {
       </div>
       <ul className={styles.menu}>
         <li><a href="/brochure/brochure.pdf" target="_blank" rel="noopener noreferrer">BROCHURE</a></li>
-        <li><a href="/rera/rera.pdf" target="_blank" rel="noopener noreferrer">HRERA LICENSE</a></li>
+        <li><a href="/rera/rera.jpeg" target="_blank" rel="noopener noreferrer">HRERA LICENSE</a></li>
         <li><a href="/siteplan/siteplan.pdf" target="_blank" rel="noopener noreferrer">SITE PLAN</a></li>
         <li><a href="/pricelist/pricelist.pdf" target="_blank" rel="noopener noreferrer">PRICE LIST</a></li>
       </ul>

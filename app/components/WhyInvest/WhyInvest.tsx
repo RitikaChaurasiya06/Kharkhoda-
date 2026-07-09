@@ -86,7 +86,7 @@ export default function WhyInvest() {
               
               <div className={styles.pricingDivider}></div>
               <button className={styles.closedBtn} disabled>
-                REGISTRATION CLOSED
+                REGISTRATION OPEN
               </button>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function WhyInvest() {
           <div className={styles.alertLeftText}>
             <strong>Premium DDJAY Plots in Sector 6.</strong> <br />
             <span>Registration Amount – ₹29,000/- Only*</span>
-            <button className={styles.miniClosedBtn}>REGISTRATION CLOSED</button>
+            <button className={styles.miniClosedBtn}>REGISTRATION OPEN</button>
           </div>
           <div className={styles.reraApprovedStamp}>
             <div className={styles.stampCircle}>
@@ -157,7 +157,7 @@ export default function WhyInvest() {
 
           <div className={styles.infoBarItem}>
             <h4>HRERA-NO</h4>
-            <p>HRERA-PKL-JJR-845-2026</p>
+            <p>HRERA-PKL-SNP-797-2025</p>
           </div>
 
         </div>

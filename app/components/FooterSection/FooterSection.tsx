@@ -22,7 +22,7 @@ export default function FooterSection() {
     },
     {
       q: "3. What is the RERA number of the project?",
-      a: "The registered RERA number for this plotted development is HRERA-PKL-JJR-845-2026."
+      a: "The registered RERA number for this plotted development is HRERA-PKL-SNP-797-2025."
     },
     {
       q: "4. What is the starting investment amount?",
@@ -106,7 +106,7 @@ export default function FooterSection() {
 
           {/* RERA and Presentation Details */}
           <div className={styles.metaDetailsBlock}>
-            <h3 className={styles.reraNumberText}>RERA No. - HRERA-PKL-JJR-845-2026</h3>
+            <h3 className={styles.reraNumberText}>RERA No. - HRERA-PKL-SNP-797-2025</h3>
             <h4 className={styles.presentedByText}>PRESENTED BY: OM SHIVA REAL ESTATE PRIVATE LIMITED</h4>
             
             <p className={styles.copyrightText}>

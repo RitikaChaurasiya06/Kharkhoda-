@@ -84,7 +84,7 @@ export default function AboutProject() {
             One of the key highlights of the development is its <span className={styles.highlightText}>  Stilt + 4 Floors architectural approval.</span> This provision allows plot owners to maximize land utilization by constructing multiple floors, making it suitable for extended families or future rental income opportunities. Such flexibility adds practical value for both end users and investors.
           </p>
           <p className={styles.projectParagraph}>
-            For buyers seeking legally compliant projects, these are <span className={styles.highlightText}>DTCP Approved Plots  Kharkhoda </span>, ensuring that the development adheres to regulatory standards. Additionally, the project is registered under RERA No: HRERA-PKL-JJR-845-2026, providing transparency and greater confidence during the purchase process.
+            For buyers seeking legally compliant projects, these are <span className={styles.highlightText}>DTCP Approved Plots  Kharkhoda </span>, ensuring that the development adheres to regulatory standards. Additionally, the project is registered under RERA No: HRERA-PKL-SNP-797-2025, providing transparency and greater confidence during the purchase process.
         </p>
         <p className={styles.projectParagraph}>
           The project offers an attractive entry point for property investment, with <span className={styles.highlightText}>investment starting from ₹65 Lakh*</span>. Interested buyers can secure their booking with a registration amount of <span className={styles.highlightText}>₹29,000/-*</span>, making the initial investment relatively accessible compared to many urban residential markets.

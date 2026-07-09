@@ -170,7 +170,7 @@ export default function MasterLayout() {
             </h2>
             <div className={styles.reraNumberPill}>
               <span className={styles.pillVerticalLine}></span>
-              <p className={styles.reraNumberText}>RERA NO: HRERA-PKL-JJR-845-2026</p>
+              <p className={styles.reraNumberText}>RERA NO: HRERA-PKL-SNP-797-2025</p>
             </div>
           </div>
 
