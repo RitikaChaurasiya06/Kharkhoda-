@@ -30,7 +30,7 @@ export default function FooterSection() {
     },
     {
       q: "5. What is the registration amount?",
-      a: "The registration amount to book a plot is booking token of ₹29,000/- Only*."
+      a: "The registration amount to book a plot is booking token of ₹31,000/- Only*."
     },
     {
       q: "6. What construction is permitted on these plots?",
@@ -91,7 +91,7 @@ export default function FooterSection() {
           {/* Disclaimer Text Block */}
           <div className={styles.disclaimerBlock}>
             <p className={styles.disclaimerText}>
-              <strong>OFFICIAL PROJECT DISCLAIMER</strong> This website is an informational platform for residential plotted projects offered under the development in Sector 6,  Kharkhoda . Marketing and customer facilitation services are provided by OM SHIVA REAL ESTATE PRIVATE LIMITED. This is not an official government website.
+              <strong>OFFICIAL PROJECT DISCLAIMER</strong> This website is an informational platform for residential plotted projects offered under the development in Sector 6,  Kharkhoda . Marketing and customer facilitation services are provided by Skymarks pvt LTD. This is not an official government website.
             </p>
           </div>
 
@@ -107,7 +107,7 @@ export default function FooterSection() {
           {/* RERA and Presentation Details */}
           <div className={styles.metaDetailsBlock}>
             <h3 className={styles.reraNumberText}>RERA No. - HRERA-PKL-SNP-797-2025</h3>
-            <h4 className={styles.presentedByText}>PRESENTED BY: OM SHIVA REAL ESTATE PRIVATE LIMITED</h4>
+            <h4 className={styles.presentedByText}>PRESENTED BY: Skymarks pvt LTD</h4>
             
             <p className={styles.copyrightText}>
               © Copyright 2026 | All Rights Reserved |  Kharkhoda 

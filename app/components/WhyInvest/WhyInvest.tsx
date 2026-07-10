@@ -81,7 +81,7 @@ export default function WhyInvest() {
               <div className={styles.pricingDivider}></div>
               <div className={styles.priceRow}>
                 <span className={styles.priceLabel}>REGISTRATION AMOUNT</span>
-                <span className={styles.registrationValue}>₹29,000/-*</span>
+                <span className={styles.registrationValue}>₹31,000/-*</span>
               </div>
               
               <div className={styles.pricingDivider}></div>
@@ -98,7 +98,7 @@ export default function WhyInvest() {
         <div className={styles.alertBarContainer}>
           <div className={styles.alertLeftText}>
             <strong>Premium DDJAY Plots in Sector 6.</strong> <br />
-            <span>Registration Amount – ₹29,000/- Only*</span>
+            <span>Registration Amount – ₹31,000/- Only*</span>
             <button className={styles.miniClosedBtn}>REGISTRATION OPEN</button>
           </div>
           <div className={styles.reraApprovedStamp}>

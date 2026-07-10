@@ -87,7 +87,7 @@ export default function AboutProject() {
             For buyers seeking legally compliant projects, these are <span className={styles.highlightText}>DTCP Approved Plots  Kharkhoda </span>, ensuring that the development adheres to regulatory standards. Additionally, the project is registered under RERA No: HRERA-PKL-SNP-797-2025, providing transparency and greater confidence during the purchase process.
         </p>
         <p className={styles.projectParagraph}>
-          The project offers an attractive entry point for property investment, with <span className={styles.highlightText}>investment starting from ₹65 Lakh*</span>. Interested buyers can secure their booking with a registration amount of <span className={styles.highlightText}>₹29,000/-*</span>, making the initial investment relatively accessible compared to many urban residential markets.
+          The project offers an attractive entry point for property investment, with <span className={styles.highlightText}>investment starting from ₹65 Lakh*</span>. Interested buyers can secure their booking with a registration amount of <span className={styles.highlightText}>₹31,000/-*</span>, making the initial investment relatively accessible compared to many urban residential markets.
         </p>
         <p className={styles.projectParagraph}>
           Sector 6 enjoys connectivity to key areas of  Kharkhoda  and benefits from the region's ongoing development. The area's proximity to educational institutions, healthcare facilities, commercial zones, and major road networks contributes to its growing appeal. As  Kharkhoda  continues to evolve as an emerging residential destination, plotted developments in strategic sectors are expected to remain in demand.
