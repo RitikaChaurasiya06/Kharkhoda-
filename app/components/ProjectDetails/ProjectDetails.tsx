@@ -102,7 +102,7 @@ export default function ProjectDetails() {
           <div className={styles.mapRightBlock}>
             <div className={styles.mapGraphicCard}>
               <img 
-                src="/location.webp" 
+                src="/locations.jpg" 
                 alt="Sector 6  Kharkhoda  Layout Map Route Guide" 
                 className={styles.blueprintMapImg} 
               />
