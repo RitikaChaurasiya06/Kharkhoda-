@@ -109,7 +109,7 @@ export default function Banner() {
     <div className={styles.featureCard}>
       <h3>Loan Facility Available</h3>
       <p className={styles.mutedHeading}>Stilt + 4 Floors Approved</p>
-      <p className={styles.subText}>Pre-approved home loans HDFC.</p>
+      <p className={styles.subText}>Pre-approved home loans ICICI.</p>
     </div>
 
   </div>
