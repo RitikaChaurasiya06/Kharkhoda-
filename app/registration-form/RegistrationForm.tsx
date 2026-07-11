@@ -28,68 +28,58 @@ export default function RegistrationForm() {
   }; 
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!formData.aadhaarFile || !formData.panFile) {
-      alert("Please upload both Aadhaar and PAN card files before submitting.");
+  if (!formData.aadhaarFile || !formData.panFile) {
+    alert("Please upload both Aadhaar and PAN card files before submitting.");
+    return;
+  }
+
+  try {
+    setIsSubmitting(true);
+    const data = new FormData();
+
+    // Text fields
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("phone", formData.phone);
+    data.append("paymentMethod", "bank_transfer"); // Schema के अनुसार सही वैल्यू
+
+    // File fields (Key का नाम वही होना चाहिए जो backend में Multer accepts कर रहा है)
+    data.append("aadhaarUrl", formData.aadhaarFile);
+    data.append("panUrl", formData.panFile);
+
+    const response = await fetch("http://localhost:5000/api/v1/register", {
+      method: "POST",
+      body: data, // ध्यान दें: FormData के साथ Headers में 'Content-Type' नहीं लिखते, browser अपने आप सेट करता है
+    });
+
+    const result = await response.json().catch(() => null);
+    setIsSubmitting(false);
+
+    if (!response.ok) {
+      alert(result?.message || "Something went wrong on the server.");
       return;
     }
 
-    try {
-      setIsSubmitting(true);
-      const data = new FormData();
+    // Clear form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      aadhaarFile: null,
+      panFile: null,
+    });
 
-      data.append("name", formData.name);
-      data.append("email", formData.email);
-      data.append("phone", formData.phone);
-      data.append("paymentMethod", "bank_transfer"); 
-
-      data.append("aadhaarUrl", formData.aadhaarFile);
-      data.append("panUrl", formData.panFile);
-
-      const response = await fetch("http://localhost:5000/api/v1/register", {
-        method: "POST",
-        body: data, 
-      });
-
-      const text = await response.text();
-      setIsSubmitting(false);
-
-      if (!response.ok) {
-        let serverErrorMsg = "Server Error";
-        try {
-          const parsedErr = JSON.parse(text);
-          if (parsedErr.message) serverErrorMsg = parsedErr.message;
-        } catch {
-          // Fallback static error
-        }
-        alert(serverErrorMsg);
-        return;
-      }
-
-      // Clear the form fields smoothly
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        aadhaarFile: null,
-        panFile: null,
-      });
-
-      // Show Thank You Screen Overlay
-      setShowThankYou(true);
-
-      // Automatically hide the Thank You screen after 5 seconds (5000 milliseconds)
-      setTimeout(() => {
-        setShowThankYou(false);
-      }, 5000);
-      
-    } catch (error) {
-      setIsSubmitting(false);
-      console.error("Network Error:", error);
-      alert("Network Error: Could not connect to the registration server.");
-    }
-  };
+    setShowThankYou(true);
+    setTimeout(() => setShowThankYou(false), 5000);
+    
+  } catch (error) {
+    setIsSubmitting(false);
+    console.error("Network Error:", error);
+    alert("Network Error: Could not connect to the backend server. Make sure your backend is running on port 5000.");
+  }
+};
 
   return (
     <section className={styles.formSection}>
