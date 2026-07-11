@@ -5,11 +5,11 @@ import styles from "./ProjectDetails.module.css";
 
 export default function ProjectDetails() {
   const priceListData = [
-    { size: "93.75", price: "₹55,000", reg: "₹31,000", booking: "₹4,86,625", allotment: "₹21,46,875", midTerm: "₹15,97,500", possession: "₹10,65,000", total: "₹53,25,000" },
-    { size: "138", price: "₹55,000", reg: "₹31,000", booking: "₹7,30,000", allotment: "₹31,60,200", midTerm: "₹23,51,520", possession: "₹15,67,680", total: "₹78,38,400" },
-    { size: "142.2", price: "₹55,000", reg: "₹31,000", booking: "₹7,53,100", allotment: "₹32,56,380", midTerm: "₹24,23,088", possession: "₹16,15,392", total: "₹80,76,960" },
-    { size: "145.31", price: "₹55,000", reg: "₹31,000", booking: "₹7,70,205", allotment: "₹33,27,599", midTerm: "₹24,76,082", possession: "₹16,50,722", total: "₹82,53,608" },
-    { size: "155.86", price: "₹55,000", reg: "₹31,000", booking: "₹8,28,230", allotment: "₹35,69,194", midTerm: "₹26,55,854", possession: "₹17,70,570", total: "₹88,52,488" }
+    { size: "116.251", price: "₹55,000", reg: "₹31,000", booking: "₹6,39,380", allotment: "₹25,57,522", midTerm: "₹19,18,141", possession: "₹12,78,761", total: "₹63,93,805" },
+    { size: "138.287", price: "₹55,000", reg: "₹31,000", booking: "₹7,60,578", allotment: "₹30,42,314", midTerm: "₹22,81,735", possession: "₹15,21,157", total: "₹76,05,785" },
+    { size: "178.826", price: "₹55,000", reg: "₹31,000", booking: "₹9,83,543", allotment: "₹39,34,172", midTerm: "₹29,50,629", possession: "₹19,67,086", total: "₹98,35,930" },
+    // { size: "145.31", price: "₹55,000", reg: "₹31,000", booking: "₹7,70,205", allotment: "₹33,27,599", midTerm: "₹24,76,082", possession: "₹16,50,722", total: "₹82,53,608" },
+    // { size: "155.86", price: "₹55,000", reg: "₹31,000", booking: "₹8,28,230", allotment: "₹35,69,194", midTerm: "₹26,55,854", possession: "₹17,70,570", total: "₹88,52,488" }
   ];
 
   const locationAdvantages = [

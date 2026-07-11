@@ -42,7 +42,7 @@ export default function RegistrationForm() {
       data.append("name", formData.name);
       data.append("email", formData.email);
       data.append("phone", formData.phone);
-      data.append("paymentMethod", "qr"); 
+      data.append("paymentMethod", "bank_transfer"); 
 
       data.append("aadhaarUrl", formData.aadhaarFile);
       data.append("panUrl", formData.panFile);
@@ -245,17 +245,15 @@ export default function RegistrationForm() {
               </div>
             </div>
 
+            {/* Bank Transfer Details Box */}
             <div className={styles.paymentSelectionBox}>
-              <label className={styles.sectionLabel}>Payment Method</label>
-              <div className={styles.paymentDetailsBox}>
-                <div className={styles.qrPlaceholderBox}>
-                  <div className={styles.dummyQrCode}>
-                    <img src="/Qr.jpeg" alt="Dynamic QR Code" className={styles.qrImage} />
-                  </div>
-                  <p className={styles.qrInstructions}>
-                    Scan this dynamic QR code using any UPI App (GPay, PhonePe, Paytm) to pay <strong>₹31,000/-</strong> securely.
-                  </p>
-                </div>
+              <label className={styles.sectionLabel}>Payment Method: Bank Transfer</label>
+              <div className={styles.paymentDetailsBox} style={{ padding: "15px", backgroundColor: "#f9f9f9", borderRadius: "6px", border: "1px dashed #ccc", fontSize: "14px", color: "#333", lineHeight: "1.6" }}>
+                <p style={{ margin: "0 0 8px 0", fontWeight: "bold", color: "#1a5c41" }}>Punjab National Bank (PNB)</p>
+                <p style={{ margin: "4px 0" }}><strong>Account Name:</strong> Arveen Build Estate LLP -Escrow Collection – Arveen Build Estate LLP</p>
+                <p style={{ margin: "4px 0" }}><strong>Account No:</strong> 1522002900000276</p>
+                <p style={{ margin: "4px 0" }}><strong>IFSC Code:</strong> PUNB0152200</p>
+                <p style={{ margin: "8px 0 0 0", fontStyle: "italic", fontSize: "12px", color: "#666" }}>* Please transfer ₹31,000/- to the escrow account above to process your booking.</p>
               </div>
             </div>
 
