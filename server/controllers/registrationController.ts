@@ -85,16 +85,17 @@ export const registerUser = async (req: Request, res: Response) => {
 
     const { name, email, phone, paymentMethod } = req.body;
 
-    const dummyAadhaarUrl = `uploads/${aadhaarFile.filename || 'aadhaar_dummy.pdf'}`;
-    const dummyPanUrl = `uploads/${panFile.filename || 'pan_dummy.pdf'}`;
+    // FIX: Using the dynamic disk storage file properties created by multer
+    const permanentAadhaarUrl = `uploads/${aadhaarFile.filename}`;
+    const permanentPanUrl = `uploads/${panFile.filename}`;
 
     const newRegistration = new Registration({
       name,
       email,
       phone,
-      aadhaarUrl: dummyAadhaarUrl, 
-      panUrl: dummyPanUrl,         
-      paymentMethod: paymentMethod || 'bank_transfer', // 'bank_transfer' को डिफ़ॉल्ट रखा
+      aadhaarUrl: permanentAadhaarUrl, 
+      panUrl: permanentPanUrl,         
+      paymentMethod: paymentMethod || 'bank_transfer',
       paymentStatus: 'Pending',
       amount: 31000
     });
