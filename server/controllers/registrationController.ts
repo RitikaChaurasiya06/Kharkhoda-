@@ -67,7 +67,6 @@ export const registerUser = async (req: Request, res: Response) => {
   try {
     const multerReq = req as MulterRequest;
     
-    // Safely verify if files were passed through multer processing middleware
     if (!multerReq.files || typeof multerReq.files !== 'object') {
       return res.status(400).json({ 
         success: false, 
@@ -87,25 +86,42 @@ export const registerUser = async (req: Request, res: Response) => {
 
     const { name, email, phone, paymentMethod } = req.body;
 
-    // Direct extraction of unique filenames generated from multer diskStorage configuration
     const permanentAadhaarUrl = `uploads/${aadhaarFile.filename}`;
     const permanentPanUrl = `uploads/${panFile.filename}`;
 
-    const newRegistration = new Registration({
+    // Log the payload to your console right before saving to verify fields
+    console.log("Saving payload to DB:", {
       name,
       email,
       phone,
-      aadhaarUrl: permanentAadhaarUrl, 
-      panUrl: permanentPanUrl,         
-      paymentMethod: paymentMethod || 'bank_transfer',
-      paymentStatus: 'Pending',
-      amount: 31000
+      aadhaarUrl: permanentAadhaarUrl,
+      panUrl: permanentPanUrl
     });
 
-    // 1. Save operational model parameters to MongoDB instance
-    await newRegistration.save();
+    let newRegistration;
+    try {
+      newRegistration = new Registration({
+        name,
+        email,
+        phone: String(phone), // Cast explicitly to String to avoid schema matching bugs
+        aadhaarUrl: permanentAadhaarUrl, 
+        panUrl: permanentPanUrl,         
+        paymentMethod: paymentMethod || 'bank_transfer',
+        paymentStatus: 'Pending',
+        amount: 31000
+      });
 
-    // 2. Safely trigger background async email task without blocking primary HTTP delivery stream
+      await newRegistration.save();
+    } catch (dbError: any) {
+      // If the schema or validation crashed it, this will print out exactly why
+      console.error("🛑 DATABASE VALIDATION OR SAVE FAILED:", dbError.message);
+      return res.status(500).json({
+        success: false,
+        message: `Database Error: ${dbError.message}`
+      });
+    }
+
+    // 2. Safely trigger background async email task
     sendThankYouEmail(email, name).catch(err => {
       console.error("Async context background email processing crashed:", err);
     });
@@ -116,7 +132,6 @@ export const registerUser = async (req: Request, res: Response) => {
     });
 
   } catch (error) {
-    // This will print the exact operational breaking trace to your terminal console/Render Logs
     console.error("🔥 SYSTEM INTERNAL ERROR TRACE:", error);
     return res.status(500).json({ 
       success: false, 
