@@ -15,11 +15,16 @@ const sendThankYouEmail = async (userEmail: string, userName: string) => {
     }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // TLS
       auth: {
-        user: "janawasyojanakharkhoda@gmail.com", 
+        user: "janawasyojanakharkhoda@gmail.com",
         pass: process.env.GMAIL_APP_PASSWORD,
       },
+      connectionTimeout: 30000,
+      greetingTimeout: 30000,
+      socketTimeout: 30000,
     });
 
     const mailOptions = {
@@ -54,8 +59,8 @@ const sendThankYouEmail = async (userEmail: string, userName: string) => {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-    console.log(`Informative Email securely transmitted to: ${userEmail}`);
+    await transporter.verify();
+    console.log("SMTP Connected Successfully");
   } catch (error) {
     console.error("Nodemailer execution encountered an error:", error);
   }
