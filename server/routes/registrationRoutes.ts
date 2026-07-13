@@ -4,12 +4,11 @@ import { registerUser } from '../controllers/registrationController';
 
 const router = Router();
 
-// Keep files purely in RAM memory buffers
 const storage = multer.memoryStorage(); 
 
 const upload = multer({ 
   storage: storage,
-  limits: { fileSize: 5 * 1024 * 1024 } // 5MB Limit
+  limits: { fileSize: 5 * 1024 * 1024 } 
 });
 
 const uploadFields = upload.fields([

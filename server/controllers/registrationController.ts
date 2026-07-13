@@ -94,7 +94,7 @@ export const registerUser = async (req: Request, res: Response) => {
         name,
         email,
         phone: String(phone), 
-        aadhaarUrl: aadhaarBase64, // Safely saved directly into MongoDB string parameters
+        aadhaarUrl: aadhaarBase64, 
         panUrl: panBase64,         
         paymentMethod: paymentMethod || 'bank_transfer',
         paymentStatus: 'Pending',
