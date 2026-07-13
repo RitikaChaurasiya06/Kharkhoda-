@@ -1,23 +1,26 @@
 import { Request, Response } from 'express';
 import Registration from '../models/Registration';
 
-// Use require with an any-typed fallback to avoid TypeScript errors
 const nodemailer: any = require("nodemailer");
 
+// Cleaner, highly stable interface for Multer upload fields
 interface MulterRequest extends Request {
-  files?: {
-    [fieldname: string]: Express.Multer.File[];
-  } | Express.Multer.File[];
+  files?: any;
 }
 
-// Email Send karne ka Helper Function (Bank Details के साथ)
 const sendThankYouEmail = async (userEmail: string, userName: string) => {
   try {
+    // Fail-safe check for environment credentials before attempting email execution
+    if (!process.env.GMAIL_APP_PASSWORD) {
+      console.error("🛑 CRITICAL: GMAIL_APP_PASSWORD is missing in backend environment variables.");
+      return;
+    }
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: "janawasyojanakharkhoda@gmail.com", 
-        pass: process.env.GMAIL_APP_PASSWORD, // Ensure this is 100% set up in your server's .env file
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
@@ -64,17 +67,16 @@ export const registerUser = async (req: Request, res: Response) => {
   try {
     const multerReq = req as MulterRequest;
     
-    if (!multerReq.files || Array.isArray(multerReq.files)) {
+    // Safely verify if files were passed through multer processing middleware
+    if (!multerReq.files || typeof multerReq.files !== 'object') {
       return res.status(400).json({ 
         success: false, 
-        message: "Both Aadhaar and PAN cards are required documents." 
+        message: "Missing document uploads or dynamic form data." 
       });
     }
 
-    const files = multerReq.files as { [fieldname: string]: Express.Multer.File[] };
-    
-    const aadhaarFile = files['aadhaarUrl']?.[0];
-    const panFile = files['panUrl']?.[0];
+    const aadhaarFile = multerReq.files['aadhaarUrl']?.[0];
+    const panFile = multerReq.files['panUrl']?.[0];
 
     if (!aadhaarFile || !panFile) {
       return res.status(400).json({ 
@@ -85,7 +87,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
     const { name, email, phone, paymentMethod } = req.body;
 
-    // FIX: Using the dynamic disk storage file properties created by multer
+    // Direct extraction of unique filenames generated from multer diskStorage configuration
     const permanentAadhaarUrl = `uploads/${aadhaarFile.filename}`;
     const permanentPanUrl = `uploads/${panFile.filename}`;
 
@@ -100,15 +102,13 @@ export const registerUser = async (req: Request, res: Response) => {
       amount: 31000
     });
 
-    // 1. Save data to database
+    // 1. Save operational model parameters to MongoDB instance
     await newRegistration.save();
 
-    // 2. Trigger the email helper right here
-    try {
-      await sendThankYouEmail(email, name);
-    } catch (emailErr) {
-      console.error("Database entry saved, but notification email failed:", emailErr);
-    }
+    // 2. Safely trigger background async email task without blocking primary HTTP delivery stream
+    sendThankYouEmail(email, name).catch(err => {
+      console.error("Async context background email processing crashed:", err);
+    });
 
     return res.status(200).json({ 
       success: true, 
@@ -116,10 +116,11 @@ export const registerUser = async (req: Request, res: Response) => {
     });
 
   } catch (error) {
-    console.error("Backend Error:", error);
+    // This will print the exact operational breaking trace to your terminal console/Render Logs
+    console.error("🔥 SYSTEM INTERNAL ERROR TRACE:", error);
     return res.status(500).json({ 
       success: false, 
-      message: "Internal Server Error" 
+      message: "Internal Server Error occurred on backend processing stacks." 
     });
   }
 };
