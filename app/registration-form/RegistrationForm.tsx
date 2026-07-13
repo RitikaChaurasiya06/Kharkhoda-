@@ -12,7 +12,6 @@ export default function RegistrationForm() {
     panFile: null as File | null,
   });
 
-  // State to manage Thank You screen visibility
   const [showThankYou, setShowThankYou] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -43,15 +42,14 @@ export default function RegistrationForm() {
     data.append("name", formData.name);
     data.append("email", formData.email);
     data.append("phone", formData.phone);
-    data.append("paymentMethod", "bank_transfer"); // Schema के अनुसार सही वैल्यू
+    data.append("paymentMethod", "bank_transfer");
 
-    // File fields (Key का नाम वही होना चाहिए जो backend में Multer accepts कर रहा है)
     data.append("aadhaarUrl", formData.aadhaarFile);
     data.append("panUrl", formData.panFile);
 
-    const response = await fetch("http://localhost:5000/api/v1/register", {
+    const response = await fetch("https://kharkhoda.onrender.com/api/v1/register", {
       method: "POST",
-      body: data, // ध्यान दें: FormData के साथ Headers में 'Content-Type' नहीं लिखते, browser अपने आप सेट करता है
+      body: data,
     });
 
     const result = await response.json().catch(() => null);
@@ -83,7 +81,6 @@ export default function RegistrationForm() {
 
   return (
     <section className={styles.formSection}>
-      {/* Dynamic Thank You Screen Overlay */}
       {showThankYou && (
         <div className={styles.thankYouOverlay}>
           <div className={styles.thankYouCard}>
